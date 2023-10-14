@@ -20,7 +20,7 @@ def parse_cache(file_name) -> str:
             return ""
 
 
-def parse_article(article_content) -> str:
+def parse_article(article_content) -> dir:
     soup = bs(article_content, 'lxml')
     tit = soup.find('h3').get('title')
     top_floor = soup.find('div', attrs={'class': 'd_post_content j_d_post_content'})
